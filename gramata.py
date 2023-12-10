@@ -16,7 +16,8 @@ print(f"Grāmatu skaits ir: {gramatu_sk}")
 
 
 autora_vards = input("Šeit ievadiet autora vārdu: ")
-agrāmatas = [gramata for gramata in dotiedati if gramata["autors"]==autora_vards]
+agrāmatas = [gramata for gramata in dotiedati 
+             if gramata["autors"]==autora_vards]
 
 if agrāmatas:
  print(f"{autora_vards} grāmatas: ")
@@ -30,5 +31,6 @@ zanru_sk= {}
 for i in dotiedati:
   zanri= i['žanrs']
   zanru_sk[zanri]= zanru_sk.get(zanri,0) +1
+
 for zanri, sk in zanru_sk.items():
   print(f"Šajā žanrā '{zanri}' ir {sk} grāmatu!")
